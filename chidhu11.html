@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>k.chidvilasini's Portfolio</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #e0f7da, #a5d6a7); /* Light green gradient */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor:default;
+
+        }
+        body.dark-mode{
+      background:#333;
+       }
+
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #18bc9c;
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        section.active {
+            display: block;
+            opacity: 2;
+            margin:82px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Buttons */
+        #theme-toggle {
+            background-color: #18bc9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #theme-toggle:hover {
+            background-color: #16a085;
+        }
+
+        button, input[type="submit"] {
+            padding: 12px 25px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover, input[type="submit"]:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        /* Dark mode */
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeIn 0.6s ease;
+        }
+
+        /* Form styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 39px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        #form.dark-mode{
+             color:#333;
+}
+           
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #18bc9c;
+        }
+
+        /* Projects styling */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Dark mode */
+        .dark-mode input, .dark-mode textarea, .dark-mode ul li {
+            background-color: #fff;
+            color: black;
+            border-color: #444;
+        }
+       .darkmode header{
+             background-color:#333;
+       }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            button, input[type="submit"] {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <h1>k.chidvilasini</h1>
+        <nav>
+            <a id="home-link">Home</a>
+            <a id="skills-link">Skills</a>
+            <a id="projects-link">Projects</a>
+            <a id="contact-link">Contact</a>
+            <button id="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <h2>About Me</h2>
+        <p>Hello! I'm k.chidvilasini, a web developer passionate about building interactive and dynamic websites. This portfolio showcases my skills and projects. I love exploring new technologies and solving challenges creatively!</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Python, C++</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>Project 1: Basic Calculator</li>
+            <a href="simple calculator.html" class="cta-btn">view calculator</a>
+            <li>Project 2: Personal Portfolio Website</li>
+            <a href="chidhu11.html" class="cta-btn">view project</a>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 k.chidvilasini. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Navigation, Dark Mode, and Form Validation -->
+    <script>
+        // Function to toggle between sections
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Show the clicked section
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Event listeners for navigation links
+        document.getElementById('home-link').addEventListener('click', () => showSection('home'));
+        document.getElementById('skills-link').addEventListener('click', () => showSection('skills'));
+        document.getElementById('projects-link').addEventListener('click', () => showSection('projects'));
+        document.getElementById('contact-link').addEventListener('click', () => showSection('contact'));
+
+        // Toggle between light and dark modes
+        window.onload = function() {
+            const toggleButton = document.getElementById('theme-toggle');
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
+        };
+
+        // Custom form validation
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function(event) {
+            const email = document.getElementById('email').value;
+            const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!regex.test(email)) {
+                alert('Please enter a valid email address.');
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
